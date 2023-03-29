@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (ViewBag.Errormessage != null)
+{
+    <span style="color:red">@ViewBag.Errormessage</span>
+}
+else
+{
+    <strong>Loading...</strong>
+    <input id="fullname" value="@ViewBag.fullname" hidden />
+    <input id="token" value="@ViewBag.token" hidden />
+    <input id="nuserid" value="@ViewBag.nuserid" hidden />
+
+
+    <script>
+
+        function setCookie()
+        {
+            debugger;
+            let fullname = document.getElementById('fullname').value;
+            let token = document.getElementById('token').value;
+            let nuserid = document.getElementById('nuserid').value;
+            let now = new Date();
+            let time = now.getTime();
+            let expireTime = time + 1000 * 7200;
+            //now.setTime(expireTime);
+            now.setSeconds(expireTime);
+            var object = { N_USERID: nuserid, FULLNAME: fullname, timestamp: expireTime }
+            localStorage.setItem("TokenId", JSON.stringify(object));
+
+            document.cookie = `fullname=${fullname}`;
+            window.open('@ViewBag.link', '_self')
+        }
+         window.onload = setCookie
+
+    </script>
+
+
+
+}

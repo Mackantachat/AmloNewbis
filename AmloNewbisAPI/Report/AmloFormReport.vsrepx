@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.1.5.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="AmloFormReport" Margins="0, 1, 0, 15" PageWidth="850" PageHeight="1100" Version="21.1" DataSource="#Ref-0" Font="Cordia New, 14pt">
+  <Extensions>
+    <Item1 Ref="2" Key="VSReportExtInfo" Value=".vsrepx" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="3" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="0" />
+    <Item2 Ref="4" ControlType="DetailBand" Name="detailBand1" PageBreak="AfterBand" HeightF="840.625">
+      <Controls>
+        <Item1 Ref="5" ControlType="XRLabel" Name="label14" Multiline="true" Text="วันที่ประเมิน :" SizeF="92.70831,23" LocationFloat="421.874878,182.875" Font="Cordia New, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="6" UseFont="false" />
+        </Item1>
+        <Item2 Ref="7" ControlType="XRLabel" Name="label13" TextFormatString="{0:dd/MM/yyyy HH:mm}" Multiline="true" SizeF="243.75,23" LocationFloat="514.5832,182.875" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="8" EventName="BeforePrint" PropertyName="Text" Expression="[UPD_DT]" />
+          </ExpressionBindings>
+        </Item2>
+        <Item3 Ref="9" ControlType="XRLabel" Name="label11" Multiline="true" Text="ผู้ประเมิน :" SizeF="88.5417,23" LocationFloat="61.4583,182.875" Font="Cordia New, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="10" UseFont="false" />
+        </Item3>
+        <Item4 Ref="11" ControlType="XRLabel" Name="label12" TextFormatString="{0:dd/MM/yyyy H:mm}" Multiline="true" SizeF="220.833344,23" LocationFloat="150,182.875" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="12" EventName="BeforePrint" PropertyName="Text" Expression="[ASSESSOR]" />
+          </ExpressionBindings>
+        </Item4>
+        <Item5 Ref="13" ControlType="XRCheckBox" Name="checkBox27" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="ความเสี่ยงต่ำ" SizeF="355.208374,30.291687" LocationFloat="63.1250076,670.291748" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="14" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[RISK_CLASS] == '1'" />
+          </ExpressionBindings>
+          <StylePriority Ref="15" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="16" ControlType="XRCheckBox" Name="checkBox26" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="ความเสี่ยงกลาง" SizeF="355.208374,30.291687" LocationFloat="63.1250076,640.0001" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="17" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[RISK_CLASS] == '2'" />
+          </ExpressionBindings>
+          <StylePriority Ref="18" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="19" ControlType="XRCheckBox" Name="checkBox25" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="ความเสี่ยงสูง" SizeF="355.208374,30.291687" LocationFloat="63.12504,609.7084" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="20" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[RISK_CLASS] == '3'" />
+          </ExpressionBindings>
+          <StylePriority Ref="21" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="22" ControlType="XRCheckBox" Name="checkBox24" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="ต้องห้ามทำธุรกรรม" SizeF="355.208374,30.291687" LocationFloat="63.1250076,579.4166" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="23" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[RISK_CLASS] == '4'" />
+          </ExpressionBindings>
+          <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="25" ControlType="XRLabel" Name="label10" Multiline="true" Text="ระดับความเสี่ยงลูกค้า  " SizeF="145.833328,23" LocationFloat="50,543.708435" Font="Cordia New, 14pt, style=Bold, Underline" Padding="2,2,0,0,100">
+          <StylePriority Ref="26" UseFont="false" />
+        </Item9>
+        <Item10 Ref="27" ControlType="XRCheckBox" Name="checkBox11" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="สัญชาติอิหร่าน/เกาหลีเหนือ" SizeF="355.208374,26.1249847" LocationFloat="50,470.208374" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="28" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([NATION_SERIOUS_FLG]) &amp;&amp; [NATION_SERIOUS_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="29" UseFont="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="30" ControlType="XRCheckBox" Name="checkBox12" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="อาชีพเสี่ยง" SizeF="355.208374,26.1249847" LocationFloat="50,496.3333" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="31" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([OCC_FLG]) &amp;&amp; [OCC_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="32" UseFont="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="33" ControlType="XRCheckBox" Name="checkBox14" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="ผลิตภัณฑ์เสี่ยง" SizeF="355.208374,26.1249847" LocationFloat="433.333282,496.3333" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="34" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([PRODUCT_FLG]) &amp;&amp; [PRODUCT_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="35" UseFont="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="36" ControlType="XRCheckBox" Name="checkBox15" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="สัญชาติเสี่ยงอื่นๆ (ที่ไม่ใช่อิหร่าน&amp;เกาหลีเหนือ)" SizeF="355.208374,26.1249847" LocationFloat="433.333344,470.208374" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="37" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([NATION_OTH_FLG]) &amp;&amp; [NATION_OTH_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="38" UseFont="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="39" ControlType="XRLabel" Name="label9" Multiline="true" Text="ปัจจัยเสี่ยงร่วมอื่นๆ " SizeF="133.333328,23" LocationFloat="50,441.2084" Font="Cordia New, 14pt, style=Bold, Underline" Padding="2,2,0,0,100">
+          <StylePriority Ref="40" UseFont="false" />
+        </Item14>
+        <Item15 Ref="41" ControlType="XRCheckBox" Name="checkBox3" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="บุคคลที่ถูกกำหนด (Thailand list/UN Sanction List)" SizeF="355.208374,26.1249847" LocationFloat="50,290.750031" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="42" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([FREEZE_FLG]) &amp;&amp; [FREEZE_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="43" UseFont="false" UseTextAlignment="false" />
+        </Item15>
+        <Item16 Ref="44" ControlType="XRCheckBox" Name="checkBox4" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="บุคคลที่มีสถานภาพทางการเมืองในต่างประเทศ (PEPs)" SizeF="355.208374,26.1249847" LocationFloat="50,316.875" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="45" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([PEP_OUT_FLG]) &amp;&amp; [PEP_OUT_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="46" UseFont="false" UseTextAlignment="false" />
+        </Item16>
+        <Item17 Ref="47" ControlType="XRCheckBox" Name="checkBox5" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="บุคคลที่มีการรายงานเป็นธุรกรรมที่มีเหตุอันควรสงสัย (STR)" SizeF="355.208374,26.1249847" LocationFloat="50,343" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="48" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([STR_FLG]) &amp;&amp; [STR_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="49" UseFont="false" UseTextAlignment="false" />
+        </Item17>
+        <Item18 Ref="50" ControlType="XRCheckBox" Name="checkBox6" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="บุคคลที่แจ้งให้ทราบว่ามีความเสี่ยงต่อการฟอกเงิน (HR-08)" SizeF="355.208374,26.1249847" LocationFloat="50,369.125031" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="51" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([HR08_FLG]) &amp;&amp; [HR08_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="52" UseFont="false" UseTextAlignment="false" />
+        </Item18>
+        <Item19 Ref="53" ControlType="XRCheckBox" Name="checkBox8" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="บุคคลที่ใกล้ชิดกับบุคคลที่มีสถานภาพทางการเมืองในประเทศ (RCA)" SizeF="412.5,26.125" LocationFloat="50,395.249969" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="54" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([RCA_IN_FLG]) &amp;&amp;  [RCA_IN_FLG] =='Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="55" UseFont="false" UseTextAlignment="false" />
+        </Item19>
+        <Item20 Ref="56" ControlType="XRCheckBox" Name="checkBox7" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="บุคคลที่มีสถานภาพทางการเมืองในประเทศ (PEPs)" SizeF="355.208374,26.1249847" LocationFloat="433.333252,316.875" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="57" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([PEP_IN_FLG]) &amp;&amp; [PEP_IN_FLG] == 'Y' " />
+          </ExpressionBindings>
+          <StylePriority Ref="58" UseFont="false" UseTextAlignment="false" />
+        </Item20>
+        <Item21 Ref="59" ControlType="XRCheckBox" Name="checkBox9" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="บุคคลที่ถูกยึด/อายัด ทรัพย์สินตามคำสั่งศาล (HR-02)" SizeF="355.208374,26.1249847" LocationFloat="433.333252,342.999969" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="60" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([HR02_FLG]) &amp;&amp; [HR02_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="61" UseFont="false" UseTextAlignment="false" />
+        </Item21>
+        <Item22 Ref="62" ControlType="XRCheckBox" Name="checkBox10" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="บุคคลที่ใกล้ชิดกับบุคคลที่มีสถานภาพทางการเมืองในต่างประเทศ (RCA)" SizeF="410.458252,26.12497" LocationFloat="433.333282,369.125031" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="63" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="!IsNullOrEmpty([RCA_OUT_FLG]) &amp;&amp; [RCA_OUT_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="64" UseFont="false" UseTextAlignment="false" />
+        </Item22>
+        <Item23 Ref="65" ControlType="XRCheckBox" Name="checkBox2" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="ไม่ใช่บุคคลเดียวกัน" SizeF="240.625031,26.1249542" LocationFloat="290.625,264.625031" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="66" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[SAME_PS_UND_FLG] == 'N'" />
+          </ExpressionBindings>
+          <StylePriority Ref="67" UseTextAlignment="false" />
+        </Item23>
+        <Item24 Ref="68" ControlType="XRCheckBox" Name="checkBox1" Checked="true" CheckBoxState="Checked" TextAlignment="BottomLeft" Text="ใช่บุคคลเดียวกัน" SizeF="240.624985,26.1249847" LocationFloat="50,264.625031" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="69" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[SAME_PS_UND_FLG] == 'Y'" />
+          </ExpressionBindings>
+          <StylePriority Ref="70" UseTextAlignment="false" />
+        </Item24>
+        <Item25 Ref="71" ControlType="XRLabel" Name="label8" Multiline="true" Text="รายชื่อเสี่ยง" SizeF="100,23" LocationFloat="50,234.333359" Font="Cordia New, 14pt, style=Bold, Underline" Padding="2,2,0,0,100">
+          <StylePriority Ref="72" UseFont="false" />
+        </Item25>
+        <Item26 Ref="73" ControlType="XRLabel" Name="label7" Multiline="true" SizeF="498.958435,23" LocationFloat="184.375,146.833359" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="74" EventName="BeforePrint" PropertyName="Text" Expression="[PRENAME] + ' ' + [NAME] + ' ' + [SURNAME]" />
+          </ExpressionBindings>
+        </Item26>
+        <Item27 Ref="75" ControlType="XRLabel" Name="label6" Multiline="true" SizeF="490.625,23.0000076" LocationFloat="169.791672,110.374992" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="76" EventName="BeforePrint" PropertyName="Text" Expression="&#xA;Iif(IsNullOrEmpty([CERT_NUMBER]),[POLICY_NUMBER] ,[POLICY_NUMBER]+ ' / ' + [CERT_NUMBER] )" />
+          </ExpressionBindings>
+        </Item27>
+        <Item28 Ref="77" ControlType="XRLabel" Name="label5" Multiline="true" SizeF="122.916672,23" LocationFloat="61.4583321,146.833359" Font="Cordia New, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="78" EventName="BeforePrint" PropertyName="Text" Expression="Iif([CUST_FLG] == 'C', 'ผู้เอาประกัน : ' , 'ผู้รับผลประโยชน์ : ')" />
+          </ExpressionBindings>
+          <StylePriority Ref="79" UseFont="false" />
+        </Item28>
+        <Item29 Ref="80" ControlType="XRLabel" Name="label4" Multiline="true" Text="เลขกรมธรรม์ : " SizeF="108.333328,23" LocationFloat="61.4583321,110.374992" Font="Cordia New, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="81" UseFont="false" />
+        </Item29>
+        <Item30 Ref="82" ControlType="XRLabel" Name="label3" Multiline="true" SizeF="143.75,23" LocationFloat="130.208328,75.99999" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="83" EventName="BeforePrint" PropertyName="Text" Expression="[APP_NO]" />
+          </ExpressionBindings>
+        </Item30>
+        <Item31 Ref="84" ControlType="XRLabel" Name="label2" Multiline="true" Text="ใบคำขอ :" SizeF="68.75,23" LocationFloat="61.4583321,75.99999" Font="Cordia New, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="85" UseFont="false" />
+        </Item31>
+        <Item32 Ref="86" ControlType="XRLabel" Name="label1" Multiline="true" Text="ผลการวินิจฉัย" TextAlignment="TopCenter" SizeF="104.166656,23" LocationFloat="376.041656,19.3750057" Font="Cordia New, 16pt, style=Bold, Underline" Padding="2,2,0,0,100">
+          <StylePriority Ref="87" UseFont="false" UseTextAlignment="false" />
+        </Item32>
+      </Controls>
+    </Item2>
+    <Item3 Ref="88" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="15" />
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v21.1" Name="objectDataSource1" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0ib2JqZWN0RGF0YVNvdXJjZTEiIC8+" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>
